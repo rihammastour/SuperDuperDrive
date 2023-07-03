@@ -36,8 +36,9 @@ public class NotesController {
     }
 
     @GetMapping("/home/deleteNote/{noteId}")
-    public String deleteNote(@PathVariable Integer noteId) {
+    public String deleteNote(@PathVariable Integer noteId, Model model) {
         noteService.deleteNote(noteId);
-        return "redirect:/home";
+        model.addAttribute("success", true);
+        return "result";
     }
 }
