@@ -86,8 +86,7 @@ class CloudStorageApplicationTests {
 
 	@Test
 	public void testCredentialsManagement() {
-		doMockSignUp("reham", "alkhudaidi","ralkhudaidi","1234567");
-		doLogIn("ralkhudaidi","1234567");
+		doLogIn("LFT", "123");
 		//creates a set of credentials, verifies that they are displayed, and verifies that the displayed password is encrypted
 		credentialsPage = new CredentialsPage(driver);
 		boolean credentialCreated = credentialsPage.createCredential("http://localhost:8080/home", "rmastour", "123456");
@@ -162,8 +161,7 @@ class CloudStorageApplicationTests {
 
 	@Test
 	public void testNoteManagement() {
-		doMockSignUp("reham", "mastour alkhudaidi","rmmk","123456789");
-		doLogIn("rmmk","123456789");
+		doLogIn("rmastour","123456");
 		//creates a note, and verifies it is displayed
 		notesPage = new NotesPage(driver);
 		boolean noteCreated = notesPage.createNote("n", "d");
